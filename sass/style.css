@@ -1,0 +1,130 @@
+/*colores*/
+/*sizes*/
+* {
+  font-family: "Montserrat";
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+div#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+div#root nav.caption {
+  /*@include background(#FFD7DA)*/
+  width: 100vw;
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background: #FFD7DA;
+}
+
+#root .caption .buttons {
+  width: 500px;
+  display: flex;
+}
+
+div#root nav.caption div.buttons button {
+  background: none;
+  border: none;
+  display: flex;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  color: #FF0360;
+  padding: 4px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+div#root nav.caption div.buttons button:hover {
+  background: #FF0360;
+  color: #fff;
+}
+
+div#root header {
+  width: 100%;
+  max-width: 1184px;
+  min-height: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div#root header nav {
+  text-decoration: none;
+}
+
+div#root header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 20px 25px;
+}
+
+div#root header nav a.active {
+  color: #FF0360;
+}
+
+div#root header nav button {
+  background: none;
+  border: none;
+  border: 1px solid #FFD7DA;
+  border-radius: 3px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #FF0360;
+  transition: all 0.5s ease-in-out;
+}
+
+div#root header nav button:hover {
+  background: #FF0360;
+  color: #fff;
+}
+
+div#root header nav a:hover {
+  color: #FF8360;
+}
+
+div#root header.header img {
+  width: 150px;
+  margin-top: 20px;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background: #FFD7DA;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
