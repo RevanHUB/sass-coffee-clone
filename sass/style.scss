@@ -106,25 +106,30 @@ div#root header nav button:hover
 div#root header nav a:hover
     color:$hover_color
 
-div#root header.header img 
-    width: 150px
-    margin-top: 20px
-    height: 80%
-    object-fit: cover
+div#root header.header img {
+    width: 150px;
+    margin-top: 20px;
+    height: 80%;
+    object-fit: cover;
+}
+    
 
 
 footer 
-    display: flex
-    width: 100%
-    height: 350px 
-    background: $pink
+    display: flex;
+    width: 100%;
+    height: 350px; 
+    background: $pink;
 
-footer nav 
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-footer nav a 
-    text-transform: uppercase
-    text-decoration: none
+footer nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+} 
+    
