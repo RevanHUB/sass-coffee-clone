@@ -1,0 +1,14 @@
+
+/* only mixin in this file */
+@mixin background($color) {
+    background: $color;
+}
+
+@mixin remove_buttons_format() {
+    background: none;
+    border: none;
+}
+
+@mixin hover_pink_strong() {
+    background: $pink_strong;
+}

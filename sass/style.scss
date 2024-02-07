@@ -1,15 +1,4 @@
-/*colores*/
-$background: #ef0111;
-$color_span: #ef0111;
-$color_example: #141313;
-$warning_color: #ffee00;
-$hover_color: #FF8360;
-$pink_strong: #FF0360;
-/*sizes*/
-$size_12: 12px;
-$pink: #FFD7DA;
-$pink_font: #FF0360;
-$warning_size: 2em;
+@import 'imports/variables', 'imports/mixin';
 
 * {
     font-family: 'Montserrat';
@@ -18,32 +7,16 @@ $warning_size: 2em;
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
-   
-    
-
-@mixin background($color) {
-    background: $color;
-}
-
-@mixin remove_buttons_format() {
-    background: none;
-    border: none;
-}
-
-div#root {
-    
+#root {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-div#root nav.caption {
+#root nav.caption {
         /*@include background(#FFD7DA)*/
         width: 100vw;
         padding:5px 0px;
@@ -60,7 +33,7 @@ div#root nav.caption {
 }
 
 
-div#root nav.caption div.buttons button {
+#root nav.caption div.buttons button {
     @include remove_buttons_format();
     display: flex;
     margin-right:20px;
@@ -72,75 +45,124 @@ div#root nav.caption div.buttons button {
     transition: all .2s ease-in;
 }
 
-div#root nav.caption div.buttons button:hover {
+#root nav.caption div.buttons button:hover {
     background: #FF0360;
     color: #fff;
 } 
 
 
-div#root header {
+#root header {
     width: 100%;
-    max-width: 1184px;
-    min-height: 120px;
-    height: 80px;
+    max-width: 1000px;
+    min-height: 110px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
     
-div#root header nav {
+#root header.header img {
+    width: 160px;
+    margin-top: 10px;
+    height: 100%;
+    object-fit: scale-down;
+}
+    
+
+#root header nav {
     text-decoration: none;
+    // background:gray;
+    display:flex;
 }
 
-div#root header nav a {
+#root header nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     padding: 20px 25px ;
 }
 
-div#root header nav a.active {
+#root header nav a.active {
     color: $pink_strong;
 }
 
-div#root header nav button {
+#root header nav button {
     @include remove_buttons_format();
-    border: 1px solid $pink;
+    border: 1px solid $pink_strong;
     border-radius: 3px;
     padding: 15px 25px;
+    height:fit-content;
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
     color: $pink_strong;
+    margin-top:.2em;
+    margin-left:15px;
     transition: all .5s ease-in-out;
 }
 
-div#root header nav button:hover {
+section {
+    width:100%;
+    height:fit-content;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    // height:300px;
+}
+
+.menu-holder {
+    // height:1000px;
+}
+
+
+
+.menu-holder .carta:first-of-type {
+    margin-top:20px;
+}
+
+.menu-holder .carta {
+    margin-bottom:20px;
+    max-width:800px;
+}
+section .container-pink {
+    background:#f3f3f3;
+    width:100%;
+    height:800px;
+}
+
+#root header nav button:hover {
     background: $pink_strong;
     color: #fff;
 }
-div#root header nav a:hover {
-    color:$hover_color;
-}
-    
 
-div#root header.header img {
-    width: 150px;
-    margin-top: 20px;
-    height: 80%;
-    object-fit: cover;
+#root header nav a:hover {
+    color:$hover_color;
 }
     
 
 
 footer {
     display: flex;
+    align-items: center;
+    justify-content:center;
     width: 100%;
     height: 350px; 
     background: $pink;
 }
     
+footer .logo-wrapper {
+    // background:red;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+footer .logo-wrapper img {
+    width:200px;
+
+}
 
 footer nav {
     display: flex;
@@ -148,9 +170,15 @@ footer nav {
     align-items: center;
     justify-content: center;
 }
-
+footer .logo-wrapper a {
+    color:#fff;
+    text-decoration: none;
+    font-size:1.5rem;
+}
 footer nav a {
     text-transform: uppercase;
+    color:#A2A2AF;
+    font-weight:normal;
     text-decoration: none;
 } 
     
