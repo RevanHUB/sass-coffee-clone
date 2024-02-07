@@ -1,0 +1,184 @@
+@import 'imports/variables', 'imports/mixin';
+
+* {
+    font-family: 'Montserrat';
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#root nav.caption {
+        /*@include background(#FFD7DA)*/
+        width: 100vw;
+        padding:5px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        background: $pink;
+}
+
+#root .caption .buttons {
+    width: 500px;
+    display: flex;
+}
+
+
+#root nav.caption div.buttons button {
+    @include remove_buttons_format();
+    display: flex;
+    margin-right:20px;
+    font-size:1.2rem;
+    color: $pink_font;
+    padding: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+#root nav.caption div.buttons button:hover {
+    background: #FF0360;
+    color: #fff;
+} 
+
+
+#root header {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 110px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+#root header.header img {
+    width: 160px;
+    margin-top: 10px;
+    height: 100%;
+    object-fit: scale-down;
+}
+    
+
+#root header nav {
+    text-decoration: none;
+    // background:gray;
+    display:flex;
+}
+
+#root header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 20px 25px ;
+}
+
+#root header nav a.active {
+    color: $pink_strong;
+}
+
+#root header nav button {
+    @include remove_buttons_format();
+    border: 1px solid $pink_strong;
+    border-radius: 3px;
+    padding: 15px 25px;
+    height:fit-content;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $pink_strong;
+    margin-top:.2em;
+    margin-left:15px;
+    transition: all .5s ease-in-out;
+}
+
+section {
+    width:100%;
+    height:fit-content;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    // height:300px;
+}
+
+.menu-holder {
+    // height:1000px;
+}
+
+
+
+.menu-holder .carta:first-of-type {
+    margin-top:20px;
+}
+
+.menu-holder .carta {
+    margin-bottom:20px;
+    max-width:800px;
+}
+section .container-pink {
+    background:#f3f3f3;
+    width:100%;
+    height:800px;
+}
+
+#root header nav button:hover {
+    background: $pink_strong;
+    color: #fff;
+}
+
+#root header nav a:hover {
+    color:$hover_color;
+}
+    
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 350px; 
+    background: $pink;
+}
+    
+footer .logo-wrapper {
+    // background:red;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+footer .logo-wrapper img {
+    width:200px;
+
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .logo-wrapper a {
+    color:#fff;
+    text-decoration: none;
+    font-size:1.5rem;
+}
+footer nav a {
+    text-transform: uppercase;
+    color:#A2A2AF;
+    font-weight:normal;
+    text-decoration: none;
+} 
+    
